@@ -29,7 +29,7 @@ public class GrabAndThrow : MonoBehaviour
 
         if(Input.GetButtonDown("Fire2")){ //Left Control
 
-            
+            Debug.Log("lo agarro");
 
             if(!isGrabbed){
 
