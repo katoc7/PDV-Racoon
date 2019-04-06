@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: ca1fca52adf488248a2d3922e6bf41d5
+  productGUID: 4e9abd5bf20892f44aae3834e84bb920
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Entrega2
+  productName: Entrega 2.1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -580,9 +580,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 21b0dd5a-5ad6-477a-b9ac-1d6181b63dfe
+  cloudProjectId: 58286e9b-5b96-41da-beb1-104b036c0241
   framebufferDepthMemorylessMode: 0
-  projectName: Entrega2
+  projectName: Entrega 2.1
   organizationId: a01652799
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
