@@ -14,17 +14,12 @@ public class ChaserAi : MonoBehaviour
     public float chaseRangePlayer;
     public float chaseRangeDistractor;
 
-    public Transform healthBarTransform;
-
-    HealthSystem healthSystem = new HealthSystem(100);
     
     // Start is called before the first frame update
     void Start()
     {
         
-        HealthBar healthBar = healthBarTransform.GetComponent<HealthBar>();
-
-        healthBar.Setup(healthSystem);
+       
     }
 
     // Update is called once per frame
@@ -48,7 +43,7 @@ public class ChaserAi : MonoBehaviour
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
     }
-
+    /*
      void OnTriggerEnter2D(Collider2D col) {
 
          
@@ -70,4 +65,5 @@ public class ChaserAi : MonoBehaviour
             }
 
     }
+    */
 }
