@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -30,20 +29,33 @@ void OnCollisionEnter2D(Collision2D col)
             countText.text = "" + count;
         }
 
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Pig")
         {
-            int nhealth = health-20;
+            int nhealth = health-100;
+            life.value = nhealth;
+            health = nhealth;
+            damageImage.color = flashColour;
+            Debug.Log("MAPACHE MUERTO");
+            gameOverPanel.gameObject.SetActive(true);
+            hudPanel.gameObject.SetActive(false);
+        }
+
+        if (col.gameObject.tag == "Bat")
+        {
+            int nhealth = health - 10;
             life.value = nhealth;
             health = nhealth;
             damageImage.color = flashColour;
             StartCoroutine(ChangeWhite());
-            
-            if (nhealth<=0){
+
+            if (nhealth <= 0)
+            {
                 Debug.Log("MAPACHE MUERTO");
                 gameOverPanel.gameObject.SetActive(true);
                 hudPanel.gameObject.SetActive(false);
 
             }
+
         }
 
         if (col.gameObject.tag == "Heart")

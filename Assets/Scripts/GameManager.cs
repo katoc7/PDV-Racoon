@@ -5,15 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
   
+    void Start()
+    {
 
+    }
     
-    // Start is called before the first frame update
-    void Start() { }
-    
-        //healthSystem.Damage(10);
-    
-
-    // Update is called once per frame
     void Update()
     {
         

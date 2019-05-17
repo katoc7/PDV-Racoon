@@ -5,8 +5,8 @@ public class Loader : MonoBehaviour
 
 {
     public CharacterData characterData;
-  
     public Button load;
+
     void Start()
     {
         load.onClick.AddListener(Loading);

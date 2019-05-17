@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 333706702}
   - component: {fileID: 333706701}
   - component: {fileID: 333706700}
+  - component: {fileID: 333706703}
   m_Layer: 5
   m_Name: Load_Button
   m_TagString: Untagged
@@ -451,6 +452,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333706698}
   m_CullTransparentMesh: 0
+--- !u!114 &333706703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333706698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce5ddc2e82eb5f44b1abf63159fc946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData:
+    health: 0
+    paints: 0
+  load: {fileID: 333706700}
 --- !u!224 &529723588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1723325694574930988, guid: 6cbf7db40b9cb164d979fb893c2db536,
