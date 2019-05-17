@@ -9,6 +9,7 @@ TagManager:
   - Pole
   - Paint
   - Enemy
+  - Heart
   layers:
   - Default
   - TransparentFX

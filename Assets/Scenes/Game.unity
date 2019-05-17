@@ -1603,9 +1603,10 @@ GameObject:
   - component: {fileID: 307022095}
   - component: {fileID: 307022097}
   - component: {fileID: 307022096}
+  - component: {fileID: 307022098}
   m_Layer: 0
-  m_Name: Tileset_14
-  m_TagString: Untagged
+  m_Name: h1
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1618,8 +1619,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307022093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 6.7, z: -3.694451}
-  m_LocalScale: {x: 5.0008397, y: 5.0008397, z: 5.0008397}
+  m_LocalPosition: {x: 1.79, y: 11.05, z: -3.694451}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 475860607}
   m_RootOrder: 0
@@ -1661,7 +1662,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300028, guid: 751aa471e34d70745a975c5633a82f4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76efa217706f25a4183266a92a8458cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1672,27 +1673,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &307022096
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &307022096
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307022093}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9be8d06de876d6408f84c9a6ff137b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &307022097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1710,7 +1702,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.48}
+    oldSize: {x: 8.2, y: 8.32}
     newSize: {x: 0.28, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1719,6 +1711,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28, y: 0.48}
   m_EdgeRadius: 0
+--- !u!50 &307022098
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307022093}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1 &353968246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,9 +1907,10 @@ GameObject:
   - component: {fileID: 364778628}
   - component: {fileID: 364778627}
   - component: {fileID: 364778626}
+  - component: {fileID: 364778629}
   m_Layer: 0
-  m_Name: Tileset_14 (1)
-  m_TagString: Bone
+  m_Name: h2
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1909,33 +1923,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364778624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.24, y: 11.44, z: -3.694451}
-  m_LocalScale: {x: 3.7226605, y: 3.7226605, z: 3.7226605}
+  m_LocalPosition: {x: 248, y: 18.2, z: -3.694451}
+  m_LocalScale: {x: 0.23791417, y: 0.23791417, z: 0.23791417}
   m_Children: []
   m_Father: {fileID: 475860607}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &364778626
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &364778626
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364778624}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9be8d06de876d6408f84c9a6ff137b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &364778627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,7 +1958,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.48}
+    oldSize: {x: 8.2, y: 8.32}
     newSize: {x: 0.28, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1999,7 +2004,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300028, guid: 751aa471e34d70745a975c5633a82f4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76efa217706f25a4183266a92a8458cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2010,6 +2015,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &364778629
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364778624}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1 &369245998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2121,7 @@ GameObject:
   - component: {fileID: 475860607}
   - component: {fileID: 475860606}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Heart_Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3949,7 +3975,6 @@ GameObject:
   m_Component:
   - component: {fileID: 966171545}
   - component: {fileID: 966171544}
-  - component: {fileID: 966171549}
   - component: {fileID: 966171543}
   - component: {fileID: 966171550}
   - component: {fileID: 966171542}
@@ -4145,24 +4170,6 @@ MonoBehaviour:
   distance: 0.71
   puntoAnclaje: {fileID: 1948037293}
   forceThrow: 5
---- !u!114 &966171549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966171540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f892d938cb756c24d8b8d4d21b77c91d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1056954298}
-  damageImage: {fileID: 269087535}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!114 &966171550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4175,10 +4182,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c432c24265f544a4ea504d16720cc842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapache: {fileID: 966171546}
   countText: {fileID: 1379799018}
   gameOverPanel: {fileID: 90543517}
+  damageImage: {fileID: 269087535}
   hudPanel: {fileID: 1651010780}
   life: {fileID: 1056954298}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  normalColour: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &968031629
 GameObject:
   m_ObjectHideFlags: 0
