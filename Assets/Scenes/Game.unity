@@ -728,6 +728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157687198}
+  - component: {fileID: 157687197}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -735,6 +736,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &157687197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157687196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817a67940708f864aa2777ced4043573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paints: 0
+  healt: 0
+  position: {x: 0, y: 0, z: 0}
+  level: 0
+  countPaint: {fileID: 1379799018}
+  lv: {fileID: 1076645220}
+  life: {fileID: 1056954298}
+  rb2d: {fileID: 966171542}
+  reikon: {fileID: 966171540}
+  countText: {fileID: 1379799018}
+  gameOverPanel: {fileID: 90543517}
+  damageImage: {fileID: 269087535}
+  hudPanel: {fileID: 1651010780}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  normalColour: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &157687198
 Transform:
   m_ObjectHideFlags: 0
@@ -4435,6 +4464,7 @@ GameObject:
   - component: {fileID: 992046536}
   - component: {fileID: 992046535}
   - component: {fileID: 992046538}
+  - component: {fileID: 992046539}
   m_Layer: 5
   m_Name: Yes_Button
   m_TagString: Untagged
@@ -4503,7 +4533,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 992046538}
-        m_MethodName: saveGame
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 992046539}
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4561,7 +4602,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 992046533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2154787f15d2f438a40461badd1dcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 851f69ab5ee3e154fa98d0d3f2f53c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   paints: 0
@@ -4569,9 +4610,21 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   level: 0
   countPaint: {fileID: 1379799018}
-  countlv: {fileID: 1076645220}
+  lv: {fileID: 1076645220}
   life: {fileID: 1056954298}
   rb2d: {fileID: 966171542}
+--- !u!114 &992046539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992046533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a73c9222336e844adb7efa0160c39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &993529969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,10 +5655,10 @@ MonoBehaviour:
   health: 0
   position: {x: 0, y: 0, z: 0}
   level: 0
-  countPaint: {fileID: 0}
-  lv: {fileID: 0}
-  life: {fileID: 0}
-  rb2d: {fileID: 0}
+  countPaint: {fileID: 1379799018}
+  lv: {fileID: 1076645220}
+  life: {fileID: 1056954298}
+  rb2d: {fileID: 966171542}
 --- !u!4 &1251501311
 Transform:
   m_ObjectHideFlags: 0

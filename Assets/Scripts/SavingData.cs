@@ -18,23 +18,28 @@ public class SavingData : MonoBehaviour
     public Text lv;
     public Slider life; //listo
     public Rigidbody2D rb2d;
-    private string DATA_PATH = "/MyGame.dat";
+    private string DATA_PATH = "/MyGamef.dat";
     private Player raccon;
 
-
+  
     // Update is called once per frame
-    public void SaveData(Player p)
+    public void SaveData()
     {
-      
+        health = life.value;
+        paints = Int32.Parse(countPaint.text);
+        level = Int32.Parse(lv.text);
+        position = rb2d.position;
+
         FileStream file = null;
-        raccon = p;
+
         try
         {
             BinaryFormatter bf = new BinaryFormatter();
 
             file = File.Create(Application.persistentDataPath + DATA_PATH);
+            Player p = new Player(paints,health,position,level);
+            Debug.Log(p.Health);
             bf.Serialize(file, p); //encript and saving
-            Debug.Log("SAVED");
 
         }catch(Exception e)
         {
@@ -50,31 +55,7 @@ public class SavingData : MonoBehaviour
                 file.Close();
             }
         }
-    }
-
-   public void LoadData()
-    {
-        FileStream file = null;
-
-        try
-        {
-            BinaryFormatter bf = new BinaryFormatter();
-
-            file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
-            raccon = bf.Deserialize(file) as Player;
-            //decrepting and loading
-
-        }catch(Exception e)
-        {
-
-        }
-        finally
-        {
-            if (file != null)
-            {
-                file.Close();
-            }
-        }
 
     }
+
 }

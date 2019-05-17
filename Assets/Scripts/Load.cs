@@ -1,5 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -7,15 +6,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.UI;
 
-
-public class LoadSceneOnClick : MonoBehaviour
+public class Load : MonoBehaviour
 {
-   
-    public void LoadByIndex(int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
-
     private string DATA_PATH = "/MyGame.dat";
     private Player raccon;
 

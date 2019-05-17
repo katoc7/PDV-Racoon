@@ -19,7 +19,6 @@ public class ChaserAi : MonoBehaviour
     void Start()
     {
         
-       
     }
 
     // Update is called once per frame
@@ -43,27 +42,5 @@ public class ChaserAi : MonoBehaviour
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
     }
-    /*
-     void OnTriggerEnter2D(Collider2D col) {
 
-         
-        if (col.tag == "Player"){
-
-            
-            Debug.Log("Hace danio");
-            healthSystem.Damage(10);
-            Debug.Log(healthSystem.GetHealthPercent());
-            Debug.Log(healthSystem.GetHealth());
-
-            if(healthSystem.GetHealth()<=0){
-                restartTimer += Time.deltaTime;
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
-
-            }
-            
-            }
-
-    }
-    */
 }

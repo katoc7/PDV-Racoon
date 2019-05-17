@@ -22,26 +22,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        GameManager gm = new GameManager();
+        health = life.value;
+        paints = Int32.Parse(countPaint.text);
+        position = rb2d.position;
+        level = Int32.Parse(countlv.text);
     }
     
 
     public void saveGame()
     {
-        health = life.value;
-        paints = Int32.Parse(countPaint.text);
-        position = rb2d.position;
-        level = Int32.Parse(countlv.text);
-
-        Debug.Log(health);
-        Debug.Log(paints);
-        Debug.Log(position);
-        Debug.Log(level);
-
         Player raccon = new Player(paints,health,position,level);
-
-        sd.SaveData(raccon);
-        Debug.Log("SAVED");
+       // sd.SaveData(raccon);
+        //Debug.Log("SAVED");
     }
 
 
