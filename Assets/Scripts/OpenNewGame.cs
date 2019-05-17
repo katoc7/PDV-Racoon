@@ -22,7 +22,7 @@ public class OpenNewGame : MonoBehaviour
     {
         if (OnOff.Load)
         {
-            LoadGame();
+            //LoadGame();
         }
     }
 
@@ -31,19 +31,7 @@ public class OpenNewGame : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public void LoadGame()
-    {
-       if (SavingData.IsSaved && SavingData.isNull != true)
-            {
-            SavingData.LoadData();
-            Debug.Log("Loading");
-            //rakon = SavingData.Raccon;
-            //countPaint.text = SavingData.Raccon.Paints.ToString(); // Actualizar paints
-
-            //Debug.Log("saved " + SavingData.Raccon.Paints);
-        }
-
-    }
+   
 
   
 }

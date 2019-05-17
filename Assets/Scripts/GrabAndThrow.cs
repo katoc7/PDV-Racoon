@@ -6,7 +6,7 @@ public class GrabAndThrow : MonoBehaviour
 {
     public bool isGrabbed; 
     RaycastHit2D hit;
-    public float distance=5f;
+    public float distance=15f;
     public Transform puntoAnclaje;
 
     //float movementspeed = 0.5f;
@@ -27,7 +27,7 @@ public class GrabAndThrow : MonoBehaviour
        /*Vector3 posCharacter = new Vector3(Input.GetAxis("Horizontal"),0,0);
             gameObject.transform.position+=posCharacter*movementspeed;*/
 
-        if(Input.GetButtonDown("Fire2")){ //Left Control
+        if(Input.GetButtonDown("Fire2")){ //Left Alt
 
             Debug.Log("lo agarro");
 

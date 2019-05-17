@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 153599384968980537}
   - component: {fileID: 153599384968980538}
   - component: {fileID: 153599384968980539}
+  - component: {fileID: 9016846080931676420}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Pig
@@ -115,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartDelay: 5
+  animatorPig: {fileID: 0}
 --- !u!50 &153599384968980538
 Rigidbody2D:
   serializedVersion: 4
@@ -152,3 +154,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1.683775}
   serializedVersion: 2
   m_Radius: 1.4881516
+--- !u!114 &9016846080931676420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153599384968980533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936c89daa398fa44dbdcd7af4b35fcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  h: 9
+  min: -11
+  max: 15
+  vertical: 1

@@ -4,16 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bone
   - Ground
+  - Pig
   - Pole
   - Paint
-  - Enemy
-  - Heart
-  - Pig
   - Bat
+  - Heart
   - Exit
   - Menu
+  - Bone
+  - Deactivator
+  - Spot
+  - Win
   layers:
   - Default
   - TransparentFX

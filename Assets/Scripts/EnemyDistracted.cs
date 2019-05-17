@@ -12,6 +12,8 @@ public class EnemyDistracted : MonoBehaviour
      //private Vector3 iPos; 
      //private Vector3 fPos; 
     // Start is called before the first frame update
+
+    public Animator animatorPig;
     void Start()
     {
         target = null;
@@ -24,9 +26,12 @@ public class EnemyDistracted : MonoBehaviour
         //Time.timeScale = movementspeed;
 
 
-        Vector3 pattern= new Vector3(Mathf.PingPong(Time.time, 3*2),gameObject.transform.position.y,gameObject.transform.position.z);
+        //Vector3 pattern= new Vector3(Mathf.PingPong(Time.time, 3*2),gameObject.transform.position.y,gameObject.transform.position.z);
 
-        gameObject.transform.position= pattern;
+       // animatorPig.SetFloat("Patrol",1);
+
+
+       // gameObject.transform.position= pattern;
     
 
         

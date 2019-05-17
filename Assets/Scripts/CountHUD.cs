@@ -9,6 +9,7 @@ public class CountHUD: MonoBehaviour
     public SpriteRenderer mapache;
     public Text countText;
     public GameObject gameOverPanel;
+    public GameObject YouWonPanel;
     public Image damageImage;
     public GameObject hudPanel;
     public Slider life;
@@ -27,6 +28,24 @@ public class CountHUD: MonoBehaviour
             Debug.Log("Going to LEVEL 2");
             LoadByIndex(4);
         }
+        if (col.gameObject.tag == "Win")
+        {
+            Debug.Log("You WON");
+            YouWonPanel.gameObject.SetActive(true);
+            hudPanel.gameObject.SetActive(false);
+        }
+
+        if ( col.gameObject.tag == "Bat" || col.gameObject.tag == "Pig" || col.gameObject.tag == "Spot")
+        {
+            int nhealth = health - 100; //CAMBIAR CERDO
+            life.value = nhealth;
+            health = nhealth;
+            damageImage.color = flashColour;
+            Debug.Log("MAPACHE MUERTO");
+            gameOverPanel.gameObject.SetActive(true);
+            hudPanel.gameObject.SetActive(false);
+        }
+
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -37,9 +56,9 @@ public class CountHUD: MonoBehaviour
             countText.text = "" + count;
         }
 
-        if (col.gameObject.tag == "Pigg")
+        if (col.gameObject.tag == "Pig"|| col.gameObject.tag == "Spot" || col.gameObject.tag == "Bat")
         {
-            int nhealth = health-5; //CAMBIAR CERDO
+            int nhealth = health-100; //CAMBIAR CERDO
             life.value = nhealth;
             health = nhealth;
             damageImage.color = flashColour;
@@ -48,9 +67,10 @@ public class CountHUD: MonoBehaviour
             hudPanel.gameObject.SetActive(false);
         }
 
+
         if (col.gameObject.tag == "Bat")
         {
-            int nhealth = health - 10;
+            int nhealth = health - 100;
             life.value = nhealth;
             health = nhealth;
             damageImage.color = flashColour;

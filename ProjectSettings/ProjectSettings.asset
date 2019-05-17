@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 4e9abd5bf20892f44aae3834e84bb920
+  productGUID: 1f74108618fd8c7418619308338748da
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: pdvRaccon
+  companyName: BlackRacoon
+  productName: MapacheLadronFinal
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -580,9 +580,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 58286e9b-5b96-41da-beb1-104b036c0241
+  cloudProjectId: ef5f4ba0-cec2-48c4-afd2-90625080e1f8
   framebufferDepthMemorylessMode: 0
-  projectName: Entrega 2.1
+  projectName: MapacheLadronFinal
   organizationId: a01652799
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

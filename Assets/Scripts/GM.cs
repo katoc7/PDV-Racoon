@@ -38,7 +38,7 @@ public class GM : MonoBehaviour
 
 
     void Start()
-    {
+    {/*
         if (instance == null)
         {
             instance = this;
@@ -47,8 +47,13 @@ public class GM : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        
+
+        if (SavingData.IsSaved)
+        {
+            Debug.Log("MATAME YA");
+            SavingData.LoadData();
+        }
+       */
     }
 
  

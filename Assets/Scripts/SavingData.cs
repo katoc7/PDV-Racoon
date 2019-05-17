@@ -4,7 +4,6 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-
 using UnityEngine.UI;
 
 public class SavingData : MonoBehaviour
@@ -16,7 +15,7 @@ public class SavingData : MonoBehaviour
     private static bool isSaved;
     private static Player raccon;
 
-    public Text countPaint;
+    public  Text countPaint;
     public Text lv;
     public Slider life; //listo
     public Rigidbody2D rb2d;
@@ -69,36 +68,45 @@ public class SavingData : MonoBehaviour
 
     public static void LoadData()
     {
-        FileStream file = null;
-
-        Debug.Log("decrepting and loading");
-        try
+        FileStream file;
+        if (File.Exists(Application.persistentDataPath + DATA_PATH))
         {
-            BinaryFormatter bf = new BinaryFormatter();
-
-            file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
-            raccon = bf.Deserialize(file) as Player;
-
-            Debug.Log("paiL " + raccon.Paints);
-            Debug.Log("heL  " + raccon.Health);
-            Debug.Log("lvL " + raccon.Level);
-            Debug.Log("posL " + raccon.Pos);
-
-
-            Debug.Log("decrepting and loading");
-
-        }
-        catch (Exception e)
-        {
-
-        }
-        finally
-        {
-            if (file != null)
-            {
+            try {
+                BinaryFormatter bf = new BinaryFormatter();
+                file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
+                raccon = bf.Deserialize(file) as Player;
+                Debug.Log("jua");
                 file.Close();
             }
+            catch(Exception e)
+            {
+
+            }
+            finally
+            {
+                
+            }
+
+            
+            //countPaint.text = raccon.Paints.ToString(); // Actualizar paints
+
+            Debug.Log("LOAD cOMPLER");
         }
+        /*try {
+            BinaryFormatter bf = new BinaryFormatter();
+            
+            file = File.Open(Application.persistentDataPath + DATA_PATH,FileMode.Open);
+            raccon = bf.Deserialize(file) as Player;
+            Debug.Log("juas");
+
+        }
+        catch (Exception e){
+
+        }finally{
+            if (file != null){
+                file.Close();
+            }
+        }*/
 
     }
 }

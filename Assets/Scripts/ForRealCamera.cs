@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ForRealCamera : MonoBehaviour
 {
-    PolygonCollider2D cameraCol;
+    BoxCollider2D cameraCol;
     private Transform target;
     float restartTimer; 
+
+    public Light l;
     // Start is called before the first frame update
     void Start()
     {
-        cameraCol = gameObject.GetComponent<PolygonCollider2D>();
+        cameraCol = gameObject.GetComponent<BoxCollider2D>();
         cameraCol.enabled=true;
         target=null;
     }
@@ -62,8 +64,11 @@ public class ForRealCamera : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("summat");
         //inciarCameraOnOff();
-        if(other.tag!="Enemy" || other.tag!="Player"){
-            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        if(other.tag!="Deactivator"){
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        } else if(other.tag == "Deactivator"){
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            l.GetComponent<Light>().enabled = false;
         }
 
         if (other.tag == "Player"){// 
@@ -75,7 +80,11 @@ public class ForRealCamera : MonoBehaviour
             SceneManager.LoadScene(scene.name);
             Debug.Log("Salio");
             }
+
+
+
     }
+
 
     /*void OnTriggerEnter2D(Collider2D other)
     {
