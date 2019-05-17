@@ -38,7 +38,7 @@ public class SavingData : MonoBehaviour
 
             file = File.Create(Application.persistentDataPath + DATA_PATH);
             Player p = new Player(paints,health,position,level);
-            Debug.Log(p.Health);
+            //Debug.Log(p.Paints);
             bf.Serialize(file, p); //encript and saving
 
         }catch(Exception e)
@@ -58,4 +58,30 @@ public class SavingData : MonoBehaviour
 
     }
 
+    public void LoadData()
+    {
+        FileStream file = null;
+
+        try
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+
+            file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
+            raccon = bf.Deserialize(file) as Player;
+            //decrepting and loading
+
+        }
+        catch (Exception e)
+        {
+
+        }
+        finally
+        {
+            if (file != null)
+            {
+                file.Close();
+            }
+        }
+
+    }
 }

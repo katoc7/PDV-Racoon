@@ -12,6 +12,7 @@ TagManager:
   - Heart
   - Pig
   - Bat
+  - Exit
   layers:
   - Default
   - TransparentFX

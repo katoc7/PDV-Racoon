@@ -19,8 +19,16 @@ public class CountHUD: MonoBehaviour
     int count = 0;
     int health = 100;
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
 
-void OnCollisionEnter2D(Collision2D col)
+        if (col.gameObject.tag == "Exit")
+        {
+            Debug.Log("Going to LEVEL 2");
+            LoadByIndex(3);
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col)
     {
 
         if (col.gameObject.tag == "Paint")
@@ -64,6 +72,7 @@ void OnCollisionEnter2D(Collision2D col)
             life.value = nhealth;
             health = nhealth;
         }
+
     }
 
     IEnumerator ChangeWhite()
@@ -72,4 +81,8 @@ void OnCollisionEnter2D(Collision2D col)
         damageImage.color = normalColour;
     }
 
+    public void LoadByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
 }
