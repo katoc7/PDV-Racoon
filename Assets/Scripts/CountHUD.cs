@@ -25,7 +25,7 @@ public class CountHUD: MonoBehaviour
         if (col.gameObject.tag == "Exit")
         {
             Debug.Log("Going to LEVEL 2");
-            LoadByIndex(3);
+            LoadByIndex(4);
         }
     }
     void OnCollisionEnter2D(Collision2D col)

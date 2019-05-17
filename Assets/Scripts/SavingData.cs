@@ -21,7 +21,7 @@ public class SavingData : MonoBehaviour
     public Slider life; //listo
     public Rigidbody2D rb2d;
     private static string DATA_PATH = "/MyGamef.dat";
-
+    public static bool isNull;
     public static Player Raccon { get => raccon; set => raccon = value; }
     public static bool IsSaved { get => isSaved; set => isSaved = value; }
 
@@ -44,7 +44,11 @@ public class SavingData : MonoBehaviour
 
             file = File.Create(Application.persistentDataPath + DATA_PATH);
             Player p = new Player(paints,health,position,level);
-            //Debug.Log(p.Paints);
+            Debug.Log("paiS " + p.Paints);
+            Debug.Log("heS  " + p.Health);
+            Debug.Log("lvS " + p.Level);
+            Debug.Log("posS "+p.Pos);
+            isNull = false;
             bf.Serialize(file, p); //encript and saving
 
         }catch(Exception e)
@@ -67,13 +71,21 @@ public class SavingData : MonoBehaviour
     {
         FileStream file = null;
 
+        Debug.Log("decrepting and loading");
         try
         {
             BinaryFormatter bf = new BinaryFormatter();
 
             file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
-            SavingData.raccon = bf.Deserialize(file) as Player;
-            //decrepting and loading
+            raccon = bf.Deserialize(file) as Player;
+
+            Debug.Log("paiL " + raccon.Paints);
+            Debug.Log("heL  " + raccon.Health);
+            Debug.Log("lvL " + raccon.Level);
+            Debug.Log("posL " + raccon.Pos);
+
+
+            Debug.Log("decrepting and loading");
 
         }
         catch (Exception e)

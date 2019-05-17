@@ -11,24 +11,39 @@ public class OnOff : MonoBehaviour
 {
     public Button yes;
 
-    public static bool load{ get => load; set => load = value; }
+    private static bool load;
 
+    public static bool Load{ get => load; set => load = value; }
 
-
-    void Start() {
-       
-        yes.onClick.AddListener(TaskOnClick);
-    }
-
-    void TaskOnClick()
+    void Start()
     {
-        if (SavingData.IsSaved)
-        {
-            Debug.Log(SavingData.IsSaved);
-            OnOff.load = true;
-        }
-        
-    }
 
-    
+        yes.onClick.AddListener(TaskOnClick);
+        if (yes.gameObject.tag == "Menu" && !SavingData.IsSaved)
+        {
+            yes.GetComponent<Button>().interactable = false;
+        }
+
+        void TaskOnClick()
+        {
+            if (SavingData.IsSaved)
+            {
+                OnOff.load = true;
+                if (yes.gameObject.tag == "Menu")
+                {
+                   LoadByIndex(3);
+                }
+                else
+                {
+                   LoadByIndex(1);
+                    yes.GetComponent<Button>().interactable = true;
+                }
+            }
+
+        }
+        void LoadByIndex(int sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+    }
 }

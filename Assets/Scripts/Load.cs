@@ -5,6 +5,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Load : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class Load : MonoBehaviour
     public float health;
     public Vector3 position;
     public int level;
-    private static bool isSaved;
 
     public Text countPaint;
     public Text lv;
@@ -23,23 +23,14 @@ public class Load : MonoBehaviour
 
     void Start()
     {
-
-        if (OnOff.load)
+        if (SavingData.IsSaved && SavingData.isNull!= true)
         {
-            LoadGame();
-        }
-    }
-
-    void LoadGame()
-    {
-        if (SavingData.IsSaved)
-        {
-            SavingData.LoadData();
+           // SavingData.LoadData();
             rakon = SavingData.Raccon;
-            countPaint.text = rakon.Paints.ToString(); // Actualizar paints
+           // countPaint.text = rakon.Paints.ToString(); // Actualizar paints
 
+            Debug.Log(countPaint.text);
         }
-
     }
     
 }

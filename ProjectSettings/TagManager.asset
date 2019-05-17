@@ -13,6 +13,7 @@ TagManager:
   - Pig
   - Bat
   - Exit
+  - Menu
   layers:
   - Default
   - TransparentFX
