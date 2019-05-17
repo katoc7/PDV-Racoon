@@ -8,33 +8,38 @@ using UnityEngine.UI;
 
 public class Load : MonoBehaviour
 {
-    private string DATA_PATH = "/MyGame.dat";
-    private Player raccon;
+    public int paints;
+    public float health;
+    public Vector3 position;
+    public int level;
+    private static bool isSaved;
 
-    public void LoadData()
+    public Text countPaint;
+    public Text lv;
+    public Slider life; //listo
+    public Rigidbody2D rb2d;
+    private Player rakon;
+    
+
+    void Start()
     {
-        FileStream file = null;
 
-        try
+        if (OnOff.load)
         {
-            BinaryFormatter bf = new BinaryFormatter();
-
-            file = File.Open(Application.persistentDataPath + DATA_PATH, FileMode.Open);
-            raccon = bf.Deserialize(file) as Player;
-            //decrepting and loading
-
+            LoadGame();
         }
-        catch (Exception e)
-        {
+    }
 
-        }
-        finally
+    void LoadGame()
+    {
+        if (SavingData.IsSaved)
         {
-            if (file != null)
-            {
-                file.Close();
-            }
+            SavingData.LoadData();
+            rakon = SavingData.Raccon;
+            countPaint.text = rakon.Paints.ToString(); // Actualizar paints
+
         }
 
     }
+    
 }

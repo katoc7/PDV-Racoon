@@ -4053,7 +4053,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SALIR
+  m_Text: MENU
 --- !u!222 &901483451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4463,8 +4463,9 @@ GameObject:
   - component: {fileID: 992046537}
   - component: {fileID: 992046536}
   - component: {fileID: 992046535}
-  - component: {fileID: 992046538}
+  - component: {fileID: 992046540}
   - component: {fileID: 992046539}
+  - component: {fileID: 992046538}
   m_Layer: 5
   m_Name: Yes_Button
   m_TagString: Untagged
@@ -4544,12 +4545,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 992046539}
-        m_MethodName: Quit
-        m_Mode: 1
+        m_MethodName: LoadByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4622,9 +4623,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 992046533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a73c9222336e844adb7efa0160c39c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fdaae9a03c4a954b9ccd15c0289dd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &992046540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992046533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b716ce8f725b9449f58fc501ee8f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yes: {fileID: 992046535}
 --- !u!1 &993529969
 GameObject:
   m_ObjectHideFlags: 0

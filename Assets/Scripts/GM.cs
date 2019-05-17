@@ -20,7 +20,6 @@ public class GM : MonoBehaviour
     public Text lv;
     public Slider life; //listo
     public Rigidbody2D rb2d;
-    private string DATA_PATH = "/MyGamef.dat";
     private Player raccon;
     public GameObject reikon;
     
@@ -36,7 +35,6 @@ public class GM : MonoBehaviour
     int health = 100;
 
     public static GM instance = null;
-    
 
 
     void Start()
