@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.S))
         {
             rb2d.gravityScale = 1.0f;
-            Debug.Log(rb2d.gravityScale);
+           // Debug.Log(rb2d.gravityScale);
         }
 
     }

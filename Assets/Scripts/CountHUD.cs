@@ -29,9 +29,9 @@ void OnCollisionEnter2D(Collision2D col)
             countText.text = "" + count;
         }
 
-        if (col.gameObject.tag == "Pig")
+        if (col.gameObject.tag == "Pigg")
         {
-            int nhealth = health-100;
+            int nhealth = health-5; //CAMBIAR CERDO
             life.value = nhealth;
             health = nhealth;
             damageImage.color = flashColour;

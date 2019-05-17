@@ -7,21 +7,21 @@ public class Player
 
 {
     private int _paints;
-    private int _health;
-    private float _xPos;
-    private float _yPos;
+    private float _health;
+    private Vector3 _pos;
+    private int _level;
 
     public Player()
     {
 
     }
 
-    public Player(int paints, int health, float xPos, float yPos)
+    public Player(int paints, float health, Vector3 pos,int level)
     {
         _paints = paints;
         _health = health;
-        _xPos = xPos;
-        _yPos = yPos;
+        _pos = pos;
+        _level = level;
     }
 
     public int Paints
@@ -36,7 +36,19 @@ public class Player
         }
     }
 
-    public int Health
+    public int Level
+    {
+        get
+        {
+            return _level;
+        }
+        set
+        {
+            _level = value;
+        }
+    }
+
+    public float Health
     {
         get
         {
@@ -44,31 +56,20 @@ public class Player
         }
         set
         {
-            _paints = value;
+            _health = value;
         }
     }
 
-    public float XPos
+    public Vector3 Pos
     {
         get
         {
-            return _xPos;
+            return _pos;
         }
         set
         {
-            _xPos = value;
+            _pos = value;
         }
     }
 
-    public float YPos
-    {
-        get
-        {
-            return _yPos;
-        }
-        set
-        {
-            _yPos = value;
-        }
-    }
 }

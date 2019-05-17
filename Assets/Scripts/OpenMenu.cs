@@ -15,7 +15,6 @@ public class OpenMenu : MonoBehaviour
 
     void TaskOnClick()
     {
-        Debug.Log("Quit");
         panel.gameObject.SetActive(true);
     }
 
